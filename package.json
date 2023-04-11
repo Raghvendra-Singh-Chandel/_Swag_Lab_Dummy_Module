@@ -1,0 +1,17 @@
+{
+  "name": "swablab_dummy_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "chromeMobileAndTabView" : "npx playwright test --headed --project=ChromePixel5 --grep @mobileView && npx playwright test --headed --project=ChromeGalaxyS4 --grep @tabView",
+    "safariMobileAndTabView": "npx playwright test --headed --project=SafariiPhone12 --grep @mobileView && npx playwright test --headed --project=SafariIpad --grep @tabView",
+    "desktopViewInAllBrowser": "npx playwright test --headed --project=chromium --grep @desktopView && npx playwright test --headed --project=firefox --grep @desktopView && npx playwright test --headed --project=webkit --grep @desktopView"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.32.3"
+  }
+}
