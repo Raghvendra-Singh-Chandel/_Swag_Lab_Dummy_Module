@@ -19,10 +19,35 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Test In Safari for Mobile and Tab View
       run: npm run safariMobileAndTabView
+<<<<<<< HEAD
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+    - name: Run Test In Safari for Mobile and Tab View
+      run: npm run safariMobileAndTabView
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+    - name: Run Test In Chrome for Mobile and Tab View
+      run: npm run chromeMobileAndTabView
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+=======
     - name: Run Test In Safari for Mobile and Tab View
       run: npm run safariMobileAndTabView
     - name: Run Test In Chrome for Mobile and Tab View
       run: npm run chromeMobileAndTabView
+>>>>>>> 6528e43981b7404380a670bf808a9c15c0074dfc
     - name: Run Test In All Browser For Desktop
       run: npm run desktopViewInAllBrowser
     - uses: actions/upload-artifact@v3
