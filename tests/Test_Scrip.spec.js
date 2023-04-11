@@ -38,7 +38,7 @@ test('perform testing on Dummy_Module @desktopView',async({login})=> {
     
 })
 
-test.only('Perform end to end testing to create an order @desktopView',async({login,home})=> {
+test('Perform end to end testing to create an order @desktopView',async({login,home})=> {
     await test.step('Verify the functionality of the add to cart button',async()=> {
         await login.landingInToLoginPage()
         await login.loginInToApplicationWithValidCredentials('problem_user','secret_sauce')
