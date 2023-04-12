@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "chromeMobileAndTabView" : "npx playwright test --project=ChromePixel5 --grep @mobileView && npx playwright test --project=ChromeGalaxyS4 --grep @tabView",
-    "safariMobileAndTabView": "npx playwright test --project=SafariiPhone12 --grep @mobileView && npx playwright test --project=SafariIpad --grep @tabView",
-    "desktopViewInAllBrowser": "npx playwright test --project=chromium --grep @desktopView && npx playwright test --project=firefox --grep @desktopView && npx playwright test --project=webkit --grep @desktopView"
+
   },
   "keywords": [],
   "author": "",
