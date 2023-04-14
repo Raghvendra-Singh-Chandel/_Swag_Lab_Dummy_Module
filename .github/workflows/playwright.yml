@@ -11,8 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        browser: [chrome, safari, allBrowser]
-        device: ["iphone12ProMax","Pixel5","iPadPro11","desktop"]
+        testScript: [testallBrowserdesktop, testsafariiphone12ProMax, testchromePixel5,testsafariiPadPro11]
+        
 
     steps:
     - uses: actions/checkout@v3
@@ -27,10 +27,10 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run the Test Script
       id: test
-      run: npm run test:${{ matrix.browser }}:${{ matrix.device }}
+      run: npm run test:${{ matrix.testScript }}
       
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: test-results-${{ matrix.browser }}-${{ matrix.device }}
+        name: test-results-${{ matrix.testScript }}
         path: playwright-report/
