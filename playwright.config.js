@@ -49,22 +49,22 @@ module.exports = defineConfig({
     },
 
     // /* Test against mobile viewports. */
-    // {
-    //   name: 'ChromePixel5',
-    //   use: { ...devices['Pixel 5'],browserName:'chromium' },
-    // },
-    // {
-    //   name: 'SafariiPhone12',
-    //   use: { ...devices['iPhone 12'],browserName:'webkit' },
-    // },
-    // {
-    //   name: 'SafariIpad',
-    //   use: { ...devices['iPad Pro 11'],browserName:'webkit' },
-    // },
-    // {
-    //   name: 'ChromeGalaxyS4',
-    //   use: { ...devices['GalaxyS4'],browserName:'chromium' },
-    // },
+    {
+      name: 'Pixel5',
+      use: { ...devices['Pixel 5'],browserName:'chromium' },
+    },
+    {
+      name: 'safari',
+      use: { ...devices['iPhone 12'],browserName:'webkit' },
+    },
+    {
+      name: 'iphone12ProMax',
+      use: { ...devices['iPhone 12 Pro Max'],browserName:'webkit' },
+    },
+    {
+      name: 'iPadPro11',
+      use: { ...devices['iPad Pro 11'],browserName:'webkit' },
+    },
 
 
     /* Test against branded browsers. */

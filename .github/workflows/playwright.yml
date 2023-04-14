@@ -8,21 +8,29 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        testScript: [testallBrowserdesktop, testsafariiphone12ProMax, testchromePixel5,testsafariiPadPro11]
+        
+
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: 16
+
+
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run the Test Script
-      run: npx playwright test
+      id: test
+      run: npm run ${{ matrix.testScript }}
       
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: playwright-report
+        name: test-results-${{ matrix.testScript }}
         path: playwright-report/
-        retention-days: 30
