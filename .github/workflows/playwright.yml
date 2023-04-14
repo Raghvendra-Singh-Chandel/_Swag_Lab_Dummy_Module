@@ -27,7 +27,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run the Test Script
       id: test
-      run: npm run test:${{ matrix.browser }}:${{ matrix.device }} -- --reporter=json
+      run: npm run test:${{ matrix.browser }}:${{ matrix.device }}
       
     - uses: actions/upload-artifact@v3
       if: always()
