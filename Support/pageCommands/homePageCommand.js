@@ -13,8 +13,6 @@ exports.homeModule = class homeModule{
     }
 
     async getproductInCart(){
-        await this.login.landingInToLoginPage()
-        await this.login.loginInToApplicationWithValidCredentials('problem_user','secret_sauce')
         await this.home.getProductInCart()
         await this.home.getCartNotchNumber()
         await this.home.getProductInCartPane()

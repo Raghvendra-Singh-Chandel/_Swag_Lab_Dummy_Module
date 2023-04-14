@@ -19,4 +19,8 @@ exports.loginModule    =    class loginModule {
         await this.login.landingInToLoginPage()
         await this.login.loginInToApplicationWithValidCredentials(username,password)
     }
+    async loginContainerSnap() {
+        await this.login.landingInToLoginPage(this.url)
+        await this.login.loginPageImageCapture()
+    }
 }
