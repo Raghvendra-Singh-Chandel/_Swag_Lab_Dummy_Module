@@ -31,7 +31,7 @@ exports.loginPage  = class loginPage {
         const loginButton = await this.loginBtn
         expect(loginButton).toBeEnabled
         await expect (loginButton).toHaveText('Login')
-        await expect(loginButton).toHaveCSS('background-color','rgb(61, 220, 145)')
+        await expect(loginButton).toHaveCSS('background-color','rgb(62, 220, 145)')
         await loginButton.click()
         await expect(this.error.locator('h3')).toHaveText('Epic sadface: Username and password do not match any user in this service')
         await expect(this.error).toHaveCSS('background-color','rgb(226, 35, 26)')
