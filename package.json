@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:allBrowser:desktop": "npx playwright test --project chromium --project firefox --project webkit --grep @desktopView",
-    "test:safari:iphone12ProMax": "npx playwright test --project iphone12ProMax --grep @mobileView",
-    "test:chrome:Pixel5":"npx playwright test --project Pixel5 --grep @mobileView",
-    "test:safari:iPadPro11":"playwright test --project iPadPro11 --grep @tabView"
+    "testallBrowserdesktop": "npx playwright test --project chromium --project firefox --project webkit --grep @desktopView",
+    "testsafariiphone12ProMax": "npx playwright test --project iphone12ProMax --grep @mobileView",
+    "testchromePixel5":"npx playwright test --project Pixel5 --grep @mobileView",
+    "testsafariiPadPro11":"playwright test --project iPadPro11 --grep @tabView"
   },
   "keywords": [],
   "author": "",
