@@ -29,41 +29,43 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    
+   
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'],browserName:'chromium' },
+      use: { ...devices['Desktop Chrome'],browserName:'chromium', video: 'on', },
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'],browserName:'firefox' },
+      use: { ...devices['Desktop Firefox'],browserName:'firefox' , video: 'on',},
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'],browserName:'webkit' },
+      use: { ...devices['Desktop Safari'],browserName:'webkit' , video: 'on',},
     },
 
     // /* Test against mobile viewports. */
     {
       name: 'Pixel5',
-      use: { ...devices['Pixel 5'],browserName:'chromium' },
+      use: { ...devices['Pixel 5'],browserName:'chromium', video: 'on', },
     },
     {
       name: 'safari',
-      use: { ...devices['iPhone 12'],browserName:'webkit' },
+      use: { ...devices['iPhone 12'],browserName:'webkit', video: 'on', },
     },
     {
       name: 'iphone12ProMax',
-      use: { ...devices['iPhone 12 Pro Max'],browserName:'webkit' },
+      use: { ...devices['iPhone 12 Pro Max'],browserName:'webkit', video: 'on', },
     },
     {
       name: 'iPadPro11',
-      use: { ...devices['iPad Pro 11'],browserName:'webkit' },
+      use: { ...devices['iPad Pro 11'],browserName:'webkit' , video: 'on',},
     },
 
 
