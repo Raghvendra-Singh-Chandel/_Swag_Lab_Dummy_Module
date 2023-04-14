@@ -25,7 +25,7 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-     - name: Create snapshots directory
+    - name: Create snapshots directory
       run: mkdir -p tests/__snapshots__   
     - name: Run the Test Script
       id: test
