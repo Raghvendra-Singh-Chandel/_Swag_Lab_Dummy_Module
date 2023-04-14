@@ -7,7 +7,7 @@
     "testallBrowserdesktop": "npx playwright test --project chromium --project firefox --project webkit --grep @desktopView",
     "testsafariiphone12ProMax": "npx playwright test --project iphone12ProMax --grep @mobileView",
     "testchromePixel5":"npx playwright test --project Pixel5 --grep @mobileView",
-    "testsafariiPadPro11":"playwright test --project iPadPro11 --grep @tabView"
+    "testsafariiPadPro11":"playwright test --project iPadPro11 --grep @tabView "
   },
   "keywords": [],
   "author": "",

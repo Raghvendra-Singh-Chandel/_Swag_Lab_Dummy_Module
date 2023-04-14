@@ -7,7 +7,7 @@ test.describe('Login functionality',()=> {
 test('perform testing on Dummy_Module @mobileView',async({login})=> {
     
     await test.step('Verify the functionality of the Login Module with Invalid Credentials',async()=> {
-    
+    await login.loginContainerSnap()
     await login.loginWithInvalidCredential()
         
     })

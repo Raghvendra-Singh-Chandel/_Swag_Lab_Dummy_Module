@@ -1,4 +1,5 @@
 const {expect} = require('@playwright/test')
+const { updateSnapshots } = require('../../playwright.config')
 
 exports.loginPage  = class loginPage {
 
@@ -33,13 +34,17 @@ exports.loginPage  = class loginPage {
         await expect (loginButton).toHaveText('Login')
         await expect(loginButton).toHaveCSS('background-color','rgb(61, 220, 145)')
         await loginButton.click()
-        await expect(this.error.locator('h3')).toHaveText('Epic sadface: Username and password do not match any user in this services')
+        await expect(this.error.locator('h3')).toHaveText('Epic sadface: Username and password do not match any user in this service')
         await expect(this.error).toHaveCSS('background-color','rgb(226, 35, 26)')
     
     }
 
     async loginPageImageCapture() {
-        await expect(this.loginContainerImage).toHaveScreenshot('loginImage.png')
+        const screenshot = await this.loginContainerImage.screenshot()
+        await expect(screenshot).toMatchSnapshot('loginImage.png')
+        updateSnapshots
+        
+
     }
 
 }
