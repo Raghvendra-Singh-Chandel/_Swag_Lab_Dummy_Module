@@ -27,7 +27,7 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run the Test Script
       id: test
-      run: npm run test:${{ matrix.testScript }}
+      run: npm run ${{ matrix.testScript }}
       
     - uses: actions/upload-artifact@v3
       if: always()
