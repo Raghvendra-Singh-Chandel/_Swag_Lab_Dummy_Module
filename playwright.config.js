@@ -12,6 +12,10 @@ const { defineConfig, devices } = require('@playwright/test');
  */
 module.exports = defineConfig({
   testDir: './tests',
+  /**
+   * E:\SwabLab_Dummy_PlayWright\tests\Test_Scrip.spec.js-snapshots\loginImage-Pixel5-win32.png
+   */
+  updateSnapshots : 'missing',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,6 +33,8 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    screenshot: "only-on-failure"
+    
     
    
   },

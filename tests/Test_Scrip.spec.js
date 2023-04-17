@@ -17,6 +17,11 @@ test('perform testing on Dummy_Module @mobileView',async({login})=> {
     })
 })
 
+test('verify login image @mobileView',async({login})=> {
+    await login.loginContainerSnap()
+
+})
+
 })
 
 test.describe('Login functionality',()=> {
@@ -68,4 +73,6 @@ test.describe('Login functionality',()=> {
         
 //         await home.getproductInCart()    
 //     })
+
+
 // })

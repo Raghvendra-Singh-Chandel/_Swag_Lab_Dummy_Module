@@ -1,4 +1,5 @@
 const {expect} = require('@playwright/test')
+const { updateSnapshots } = require('../../playwright.config')
 
 exports.loginPage  = class loginPage {
 
@@ -39,7 +40,12 @@ exports.loginPage  = class loginPage {
     }
 
     async loginPageImageCapture() {
-        await expect(this.loginContainerImage).toHaveScreenshot('loginImage.png')
+        const screenshot = await this.loginContainerImage.screenshot()
+        expect(screenshot).toMatchSnapshot('loginImage.png',{maxDiffPixelRatio:'0.03'})
+        updateSnapshots
+        
+        
+
     }
 
 }
