@@ -12,7 +12,10 @@ const { defineConfig, devices } = require('@playwright/test');
  */
 module.exports = defineConfig({
   testDir: './tests',
-  snapshotPathTemplate: '{testDir}/__screenshots__/{testFilePath}/{arg}{ext}',
+  snapshotPathTemplate: '{testDir}/{testFilePath}/{arg}{ext}',
+  /**
+   * E:\SwabLab_Dummy_PlayWright\tests\Test_Scrip.spec.js-snapshots\loginImage-Pixel5-win32.png
+   */
   updateSnapshots : 'missing',
   /* Run tests in files in parallel */
   fullyParallel: true,
