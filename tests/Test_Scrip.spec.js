@@ -1,10 +1,13 @@
 
 const {test} = require('../Support/Fixture/Page_Object_Fixture')
 
+/**
+ * Verify the login functionality with valid and Invalid credentials in Mobile View
+ */
 
 test.describe('Login functionality',()=> {
 
-test('perform testing on Dummy_Module @mobileView',async({login})=> {
+test('Perform login functionality in @mobileView',async({login})=> {
     
     await test.step('Verify the functionality of the Login Module with Invalid Credentials',async()=> {
     
@@ -17,6 +20,10 @@ test('perform testing on Dummy_Module @mobileView',async({login})=> {
     })
 })
 
+/**
+ * Verify the login container page image in Mobile View
+ */
+
 test('verify login image @mobileView',async({login})=> {
     await login.loginContainerSnap()
 
@@ -24,9 +31,13 @@ test('verify login image @mobileView',async({login})=> {
 
 })
 
+/**
+ * Verify the login functionality with valid and Invalid credentials in Desktop View
+ */
+
 test.describe('Login functionality',()=> {
 
-    test('perform testing on Dummy_Module @desktopView',async({login})=> {
+    test('Perform login functionality in @desktopView',async({login})=> {
         
         await test.step('Verify the functionality of the Login Module with Invalid Credentials',async()=> {
  
@@ -34,16 +45,20 @@ test.describe('Login functionality',()=> {
             
         })
     
-        await test.step('Verify the functionality of the Login Module',async()=> {
+        await test.step('Verify the functionality of the Login Module with valid credentials',async()=> {
             await login.loginWithValidCredential('problem_user','secret_sauce')
         })
     })
     
     })
 
+/**
+ * Verify the login functionality with valid and Invalid credentials in Tab View
+ */
+
 test.describe('Login functionality',()=> {
 
-    test('perform testing on Dummy_Module @tabView',async({login})=> {
+    test('Perform login functionality in @tabView',async({login})=> {
             
             await test.step('Verify the functionality of the Login Module with Invalid Credentials',async()=> {
             
@@ -51,7 +66,7 @@ test.describe('Login functionality',()=> {
                 
             })
         
-            await test.step('Verify the functionality of the Login Module',async()=> {
+            await test.step('Verify the functionality of the Login Module with valid credentials',async()=> {
                 await login.loginWithValidCredential('problem_user','secret_sauce')
             })
         })
