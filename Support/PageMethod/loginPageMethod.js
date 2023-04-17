@@ -40,8 +40,8 @@ exports.loginPage  = class loginPage {
     }
 
     async loginPageImageCapture() {
-        const screenshot = await this.loginContainerImage.screenshot()
-        expect(screenshot).toHaveScreenshot('loginImage.png')
+        
+        expect(this.loginContainerImage).toHaveScreenshot('loginImage.png')
         updateSnapshots
         
 
