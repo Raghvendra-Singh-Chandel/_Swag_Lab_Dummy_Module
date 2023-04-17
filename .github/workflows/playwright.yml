@@ -25,8 +25,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Create snapshots directory
-      run: mkdir -p tests/__snapshots__   
+
+
     - name: Run the Test Script
       id: test
       run: npm run ${{ matrix.testScript }}
@@ -34,5 +34,5 @@ jobs:
     - uses: actions/upload-artifact@v3
       if: always()
       with:
-        name: test-results-${{ matrix.testScript }}
+        name: tests-${{ matrix.testScript }}
         path: playwright-report/
