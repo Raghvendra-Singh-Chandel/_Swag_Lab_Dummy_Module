@@ -11,10 +11,10 @@ exports.homePage = class homePage {
 
     }
 
-    // async getItemName() {
-    //    let itemName = await this.item.textContent()
-    //    return itemName
-    // }
+    /**
+     * Create a function for the every test step in Home Page
+     */
+    
     async getProductInCart() {
         await this.addToCart.nth(0).click()
         
@@ -24,7 +24,5 @@ exports.homePage = class homePage {
     }
     async getProductInCartPane() {
         await this.cartIcon.click()
-        // console.log(this.getItemName())
-        // // await expect(this.cartList).toHaveText(this.getItemName())
     }
 }

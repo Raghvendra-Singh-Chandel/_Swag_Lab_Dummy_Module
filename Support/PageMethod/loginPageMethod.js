@@ -12,6 +12,10 @@ exports.loginPage  = class loginPage {
         this.loginContainerImage = page.locator('.form_column')
     }
 
+    /**
+     * Create a function for the every test step in Login Page
+     */
+
     async landingInToLoginPage() {
         await this.page.goto('https://www.saucedemo.com/')
     }

@@ -2,6 +2,9 @@ const{loginPage} = require('../PageMethod/loginPageMethod')
 
 
 
+    /**
+     * Create a custom command/function for Login Page
+     */
 
 exports.loginModule    =    class loginModule {
 
@@ -10,6 +13,11 @@ exports.loginModule    =    class loginModule {
         this.login             =               new loginPage(this.page)
 
     }
+
+    
+    /**
+     * call the home page function
+     */
 
     async loginWithInvalidCredential() {
         await this.login.landingInToLoginPage()
