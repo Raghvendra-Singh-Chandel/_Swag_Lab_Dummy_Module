@@ -14,9 +14,10 @@ exports.homeModule = class homeModule{
         this.login = new loginPage(this.page)
     }
 /**
- * call the home page function
+ * call the home page function here
  */
     async getproductInCart(){
+        
         await this.home.getProductInCart()
         await this.home.getCartNotchNumber()
         await this.home.getProductInCartPane()
